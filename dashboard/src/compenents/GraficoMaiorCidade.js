@@ -1,16 +1,16 @@
 import React from 'react'
 import { Bar } from 'react-chartjs-2'
 
-const GraficoMunicipios = () => {
+const GraficoMaiorCidade = () => {
   return (
     <div>
         <Bar
             data={{
-                labels: ['Mg - 51.14%', 'Sp - 38.67%', 'ES - 4.68%', 'RJ - 5.52%'],
+                labels: ['Belo Horizonte', 'São Pulo', 'Vitória', 'Rio de Janeiro'],
                 datasets: [
                     {
-                    label: 'Quantidade de Municípios',
-                    data: [853, 645, 78, 92],
+                    label: 'Quantidade Estimada de Habitantes',
+                    data: [2521564, 12325232, 6747815, 2521564],
                     backgroundColor: [
                         'rgba(30,144,255, 0.5)',
                         
@@ -30,6 +30,11 @@ const GraficoMunicipios = () => {
                 width={800}
                 options={{
                   maintainAspectRatio: false,
+                  Element:{
+                    Bar:{
+                        borderSkipped:'left',
+                    }
+                  },
                   plugins: {
                     legend: {
                         align: 'center',
@@ -48,4 +53,4 @@ const GraficoMunicipios = () => {
   )
 }
 
-export default GraficoMunicipios
+export default GraficoMaiorCidade

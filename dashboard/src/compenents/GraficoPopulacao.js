@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import { Pie } from 'react-chartjs-2'
 
 const GraficoPopulacao = () => {
@@ -6,25 +6,25 @@ const GraficoPopulacao = () => {
     <div>
         <Pie
             data={{
-                labels: ['Mg', 'Sp', 'ES', 'RJ'],
+                labels: ['Mg - 23.92%', 'Sp - 52.00%', 'ES - 4.57%', 'RJ - 19.51%'],
                 datasets: [
                     {
                     label: 'População Estimada por Estado',
                     data: [21292666, 46289333, 4064052, 17366189],
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(30,144,255, 0.5)',
+                        'rgba(60,179,113, 0.5)',
+                        'rgba(220,20,60, 0.5)',
+                        'rgba(255,215,0, 0.5)',
 
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
+                        'rgba(30,144,255, 1)',
+                        'rgba(60,179,113, 1)',
+                        'rgba(220,20,60, 1)',
+                        'rgba(255,215,0, 1)',
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
 
                     },
                 ],
@@ -34,10 +34,13 @@ const GraficoPopulacao = () => {
                 options={{
                   maintainAspectRatio: false,                  
                     plugins: {
+                        
                         legend: {
+                            align: 'center',
+                            position: 'left',
                             labels:{
                                 font: {
-                                    size: 25
+                                    size: 20
                                 }
                             }
                             
